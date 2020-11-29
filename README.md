@@ -1,14 +1,3 @@
-<!--
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
--->
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -145,18 +134,3 @@ Project Link: [https://github.com/offsh/offshell](https://github.com/offsh/offsh
 
 
 
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/ofssh/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/offsh/ofsshell/repo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/offsh/offshell/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/offsh/offshell/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/ofssh/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/offsh/offshell/repo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/ofssh/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/offsh/offshell/repo/issues
-[license-shield]: https://img.shields.io/github/license/ofssh/repo.svg?style=for-the-badge
-[license-url]: https://github.com/offsh/offshell/blob/main/LICENSE
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/ofssh
