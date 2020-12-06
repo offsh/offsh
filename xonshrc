@@ -1,0 +1,111 @@
+#   ____   __  __ _____ _          _ _    _____             __ _                       _   _------------------
+#  / __ \ / _|/ _/ ____| |        | | |     / ____|           / _(_)                     | | (_)--------------
+# | |  | | |_| || (___ | |__   ___| | |    | |     ___  _ __ | |_ _  __ _ _   _ _ __ __ _| |_ _  ___  _ __----
+# | |  | |  _|  _\___ \| '_ \ / _ \ | |    | |    / _ \| '_ \|  _| |/ _` | | | | '__/ _` | __| |/ _ \| '_ \---
+# | |__| | | | | ____) | | | |  __/ | |    | |___| (_) | | | | | | | (_| | |_| | | | (_| | |_| | (_) | | | |--
+#  \____/|_| |_||_____/|_| |_|\___|_|_|     \_____\___/|_| |_|_| |_|\__, |\__,_|_|  \__,_|\__|_|\___/|_| |_|--
+#                                                                    __/ |
+#                                                                   |___/-------------------------------------
+# ------------------------------------------------------------------------------------------------------------
+
+import importlib.util
+import urllib.request
+import os.path
+import sys
+import random
+
+from os.path import exists, expanduser
+
+home = expanduser("~")
+
+def random_color(min_val=0, max_val=255):
+    def c(): return random.randint(min_val, max_val)
+    return '#%02X%02X%02X' % (c(), c(), c())
+
+""" ----------------------------------------------------------------------------------------------------------
+PROMPT POWERLEVEL2 CONFIGURATION: read https://github.com/vaaaaanquish/xontrib-powerline2 for more information
+"""
+$PL_PROMPT = 'who>rtns>short_cwd>branch'
+$PL_RPROMPT = 'virtualenv'  # for no toolbar
+$PL_TOOLBAR = 'time>full_proc>cwd'
+$PL_COLORS = {
+    "who": ("BLACK", random_color(150, 255)),
+    "venv": ("BLACK", "INTENSE_GREEN"),
+    "branch": ("#333"),
+    "cwd": ("WHITE", "#444"),
+    "git_root": ("BLACK", "#00adee"),
+    "git_sub_dir": ("WHITE", "#00adee"),
+    "short_cwd": ("WHITE", "#444"),
+    "full_proc": ("WHITE", "RED", "#444"),
+    "timing": ("WHITE", "#444"),
+    "time": ("BLACK", "#00adee"),
+    "history": ("WHITE", "#333333"),
+    "rtns": ("WHITE", "RED"),
+    "full_rtns": ("WHITE", "RED", "#444"),
+}
+
+""" ----------------------------------------------------------------------------------------------------------
+Xontribs: load Xonsh plugins
+"""
+pip install --upgrade --quiet offsh-xxh
+
+# Load default xontribs
+for main_xontrib in [
+    'coreutils',
+    'abbrevs'
+]:
+    xontrib load f"{main_xontrib}"
+
+# Load external xontribs
+for extra_xontrib in [
+    'readable-traceback',
+    'syslog-shell-profiler',
+    'powerline2',
+]:
+    xontrib load f"{extra_xontrib}" or (pip install f"xontrib-{extra_xontrib}" --upgrade --quiet and xontrib load f"{extra_xontrib}")
+
+""" ----------------------------------------------------------------------------------------------------------
+Configuration files
+"""
+
+if(not exists(f"{home}/.config/xxh/config.xxhc")):
+    if not os.path.exists(f"{home}/.config/xxh"):
+        os.makedirs(f"{home}/.config/xxh")
+    url = 'https://raw.githubusercontent.com/offsh/xxh/master/config.xxhc'
+    urllib.request.urlretrieve(url, f"{home}/.config/xxh/config.xxhc")
+
+
+""" ----------------------------------------------------------------------------------------------------------
+Environment Variables
+"""
+
+$PATH.append("~/.local/bin/")
+
+""" ----------------------------------------------------------------------------------------------------------
+Aliases
+"""
+aliases['untar'] = 'tar -zxvf '
+
+""" ----------------------------------------------------------------------------------------------------------
+Abbrevs
+"""
+
+abbrevs['ssh'] = 'xxh'
+
+""" ----------------------------------------------------------------------------------------------------------
+Command capture methods
+"""
+
+
+def predict_false(args):
+    """Never say the process is threadable."""
+    return False
+
+__xonsh__.commands_cache.threadable_predictors['xxh'] = predict_false
+
+
+""" ----------------------------------------------------------------------------------------------------------
+EXTRA USER CONFIGURATION
+"""
+execx($(zoxide init xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
+
