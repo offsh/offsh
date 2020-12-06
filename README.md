@@ -55,8 +55,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+Offshell is a project developed to investigate the viability of using Xonsh to record shell commands execution during a security auditory. We will combine this with Wazuh log data collection engine to analyze the generated logs and generate alerts according to the severity of the detected events. 
 
-TODO
 
 ### Built With
 
@@ -74,18 +74,38 @@ TO DO
 
 ### Prerequisites
 
-TO DO
+You will need to install a Wazuh agent and the Xonsh shell. Then, you just need to add the offsh configuration for Xonsh and it will do the rest. 
 
 ### Installation
 
-TO DO
+Install Wazuh agent in your server by following this guide: https://documentation.wazuh.com/4.0/installation-guide/wazuh-agent/
 
+Install Xonsh:
+```
+pip install xonsh
+```
+Add the Xonsh configuration:
+```
+curl -o ~/.xonshrc https://raw.githubusercontent.com/offsh/offshell/main/xonshrc
+```
 
-<!-- USAGE EXAMPLES -->
 ## Usage
+Then, open a shell and write xonsh to start using the offshell. If you execute
 
-TO DO
+```
+history info
+```
 
+You would check see (among other things) your syslog filename. You should mark it for being analyzed in Wazuh configuration using a block like this one:
+
+```
+<localfile>
+  <location>/home/*/.local/share/xonsh/syslog/shell_profiler.log</location>
+  <log_format>syslog</log_format>
+</localfile>
+```
+
+After adding that block to your ossec.conf file, if you agent is correctly connected to a Wazuh manager it woud start sending information about exeuted commands to your server and it will index it to a Elasticsearch index.
 
 
 <!-- ROADMAP -->
@@ -123,13 +143,6 @@ Francisco Navarro - [@twitter_handle](https://twitter.com/fnm121grg) - Navarromo
 Project Link: [https://github.com/offsh/offshell](https://github.com/offsh/offshell)
 
 
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-* []()
-* []()
-* []()
 
 
 
