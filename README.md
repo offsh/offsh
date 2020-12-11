@@ -74,15 +74,16 @@ TO DO
 
 ### Prerequisites
 
-You will need to install a Wazuh agent and the Xonsh shell. Then, you just need to add the offsh configuration for Xonsh and it will do the rest. 
+You need to install Offsh Xonsh appimage and a Wazuh agent.
 
 ### Installation
 
 Install Wazuh agent in your server by following this guide: https://documentation.wazuh.com/4.0/installation-guide/wazuh-agent/
 
-Install Xonsh:
+Download Xonsh:
 ```
-pip install xonsh
+sudo wget https://github.com/offsh/offshell/releases/download/0.0.0/xonsh -O /bin/xonsh
+sudo chmod a+x /bin/xonsh
 ```
 Add the Xonsh configuration:
 ```
