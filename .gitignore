@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+build_appimage/output
+
 # C extensions
 *.so
 
