@@ -55,12 +55,12 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-Offshell is a project developed to investigate the viability of using Xonsh to record shell commands execution during a security auditory. We will combine this with Wazuh log data collection engine to analyze the generated logs and generate alerts according to the severity of the detected events. 
+Offshell is a project developed to investigate the viability of using Xonsh to record shell commands execution during a security auditory. We will combine this with Wazuh log data collection engine to analyze the generated logs and generate alerts according to the severity of the detected events.
 
 
 ### Built With
 
-* [Xonsh](https://github.com/xonsh/xonsh)  
+* [Xonsh](https://github.com/xonsh/xonsh)
 * [Xhh](https://github.com/xxh/xxh)
 * [Wazuh](https://github.com/wazuh/wazuh)
 
@@ -85,10 +85,19 @@ Download Xonsh:
 sudo wget https://github.com/offsh/offshell/releases/download/0.0.0/xonsh -O /bin/xonsh
 sudo chmod a+x /bin/xonsh
 ```
-Add the Xonsh configuration:
+Add the Xonsh and XXH configuration:
 ```
 curl -o ~/.xonshrc https://raw.githubusercontent.com/offsh/offshell/main/xonshrc
+curl -o ~/.config/xxh/config.xxhc https://raw.githubusercontent.com/offsh/xxh/master/config.xxhc
 ```
+
+### Make it default
+
+```
+$ echo "/bin/xonsh" >> /etc/shells
+# chsh -s /bin/xonsh
+```
+
 
 ## Usage
 Then, open a shell and write xonsh to start using the offshell. If you execute

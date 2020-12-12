@@ -14,6 +14,8 @@ import os.path
 import sys
 import random
 
+$PATH = [f'{$APPDIR}/usr/bin'] + $PATH
+
 from os.path import exists, expanduser
 
 home = expanduser("~")
@@ -47,7 +49,6 @@ $PL_COLORS = {
 """ ----------------------------------------------------------------------------------------------------------
 Xontribs: load Xonsh plugins
 """
-pip install --upgrade --quiet offsh-xxh
 
 # Load default xontribs
 for main_xontrib in [
@@ -62,7 +63,7 @@ for extra_xontrib in [
     'syslog-shell-profiler',
     'powerline2',
 ]:
-    xontrib load f"{extra_xontrib}" or (pip install f"xontrib-{extra_xontrib}" --upgrade --quiet and xontrib load f"{extra_xontrib}")
+    xontrib load f"{extra_xontrib}"
 
 """ ----------------------------------------------------------------------------------------------------------
 Configuration files
@@ -84,18 +85,19 @@ $PATH.append("~/.local/bin/")
 """ ----------------------------------------------------------------------------------------------------------
 Aliases
 """
-aliases['untar'] = 'tar -zxvf '
+
+# TODO
+
 
 """ ----------------------------------------------------------------------------------------------------------
 Abbrevs
 """
 
-abbrevs['ssh'] = 'xxh'
+# TODO
 
 """ ----------------------------------------------------------------------------------------------------------
 Command capture methods
 """
-
 
 def predict_false(args):
     """Never say the process is threadable."""
@@ -107,5 +109,3 @@ __xonsh__.commands_cache.threadable_predictors['xxh'] = predict_false
 """ ----------------------------------------------------------------------------------------------------------
 EXTRA USER CONFIGURATION
 """
-execx($(zoxide init xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
-
