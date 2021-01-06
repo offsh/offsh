@@ -82,7 +82,7 @@ Install Wazuh agent in your server by following this guide: https://documentatio
 
 Download Xonsh:
 ```
-sudo wget https://github.com/offsh/offshell/releases/download/0.0.0/xonsh -O /bin/xonsh
+sudo wget https://github.com/offsh/offshell/releases/download/0.8.7/xonsh -O /bin/xonsh
 sudo chmod a+x /bin/xonsh
 ```
 Add the Xonsh and XXH configuration:
