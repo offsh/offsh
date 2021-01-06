@@ -10,7 +10,8 @@ pyparsing==2.4.7
 PyYAML==5.3.1
 wcwidth==0.2.5
 xonsh==0.9.24
-xontrib-powerline2==1.2.1
+xontrib-ergopack==0.1.1
+xontrib-prompt-bar==0.2.3
 xontrib-readable-traceback==0.3.2
 xontrib-syslog-shell-profiler==0.1.2
 
