@@ -27,9 +27,6 @@ def random_color(min_val=0, max_val=255, seed=None):
 """ ----------------------------------------------------------------------------------------------------------
 Prompt_bat configuration
 """
-$PROMPT_FIELDS['my_left_custom'] = 'Hello left!'
-$PROMPT_FIELDS['my_right_custom'] = '{BACKGROUND_YELLOW}Hello right!'
-
 
 $XONTRIB_PROMPT_BAR_WRAPPERS = {
     'brackets': lambda v: f'[{v}]',
@@ -60,16 +57,6 @@ for extra_xontrib in [
 ]:
     xontrib load f"{extra_xontrib}"
 
-""" ----------------------------------------------------------------------------------------------------------
-Configuration files
-"""
-
-if(not exists(f"{home}/.config/xxh/config.xxhc")):
-    if not os.path.exists(f"{home}/.config/xxh"):
-        os.makedirs(f"{home}/.config/xxh")
-    url = 'https://raw.githubusercontent.com/offsh/xxh/master/config.xxhc'
-    urllib.request.urlretrieve(url, f"{home}/.config/xxh/config.xxhc")
-
 
 """ ----------------------------------------------------------------------------------------------------------
 Environment Variables
@@ -77,28 +64,6 @@ Environment Variables
 
 $PATH.append("~/.local/bin/")
 
-""" ----------------------------------------------------------------------------------------------------------
-Aliases
-"""
-aliases['-'] = 'cd -'
-aliases['..'] = 'cd ..'
-
-# vim alias
-if $(which vim):
-  vi = 'vim'
-vi = 'vi'
-if $(which nvim):
-  vi = 'nvim'
-
-aliases['vi'] = vi
-aliases['vim'] = vi
-aliases ['iv'] = vi
-
-""" ----------------------------------------------------------------------------------------------------------
-Abbrevs
-"""
-
-# TODO
 
 """ ----------------------------------------------------------------------------------------------------------
 Command capture methods
