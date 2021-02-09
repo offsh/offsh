@@ -13,5 +13,5 @@ xonsh==0.9.24
 xontrib-ergopack==0.1.1
 xontrib-prompt-bar==0.2.3
 xontrib-readable-traceback==0.3.2
-xontrib-syslog-shell-profiler==0.1.2
+xontrib-syslog-shell-profiler
 offsh-xxh
