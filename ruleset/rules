@@ -1,0 +1,7 @@
+<group name="xonsh_profiler">
+<rule id="100010" level="3">
+  <program_name>xonsh_profiler</program_name>
+  <description>$(command) executed by $(who) at $(chdir)</description>
+</rule>
+</group>
+

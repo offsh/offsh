@@ -1,0 +1,9 @@
+<decoder name="xonsh_profiler">
+  <program_name>^xonsh_profiler</program_name>
+</decoder>
+
+<decoder name="xonsh_profiler">
+  <parent>xonsh_profiler</parent>
+  <regex>(\.*) executed at (\.*) by (\.*) with output (\.*) [(\.*)][(\.*) seconds]</regex>
+  <order>command, chdir, who, output, return, time</order>
+</decoder>
