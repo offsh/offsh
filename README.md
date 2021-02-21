@@ -117,6 +117,8 @@ You would check see (among other things) your syslog filename. You should mark i
 
 After adding that block to your ossec.conf file, if you agent is correctly connected to a Wazuh manager it woud start sending information about exeuted commands to your server and it will index it to a Elasticsearch index.
 
+Finally, you would need to add the rules and decoders from https://github.com/offsh/offshell/tree/main/ruleset to `/var/ossec/etc/rules` and `/var/ossec/etc/decoders/`
+
 
 <!-- ROADMAP -->
 ## Roadmap
