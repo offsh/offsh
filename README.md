@@ -88,6 +88,7 @@ sudo chmod a+x /bin/xonsh
 Add the Xonsh and XXH configuration:
 ```
 curl -o ~/.xonshrc https://raw.githubusercontent.com/offsh/offshell/main/xonshrc
+mkdir -p ~/.config/xxh/
 curl -o ~/.config/xxh/config.xxhc https://raw.githubusercontent.com/offsh/xxh/master/config.xxhc
 ```
 
