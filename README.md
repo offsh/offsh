@@ -60,9 +60,9 @@ Offshell is a project developed to investigate the viability of using Xonsh to r
 
 ### Built With
 
-* [Xonsh](https://github.com/xonsh/xonsh)
-* [Xhh](https://github.com/xxh/xxh)
-* [Wazuh](https://github.com/wazuh/wazuh)
+* [Xonsh](https://github.com/xonsh/xonsh) - Python-powered shell.
+* [xxh](https://github.com/xxh/xxh) - Bring your favorite shell wherever you go through the ssh.
+* [Wazuh](https://github.com/wazuh/wazuh) - The Open Source Security Platform.
 
 
 
