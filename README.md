@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/offsh/offshell">
-    <img src="images/offsh.png" alt="Logo" width="80" height="80">
+    <img src="images/offsh.png" alt="Logo" width="1500" height="500">
   </a>
 
   <h3 align="center">OffShell</h3>
