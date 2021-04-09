@@ -68,9 +68,6 @@ Offshell is a project developed to investigate the viability of using Xonsh to r
 <!-- GETTING STARTED -->
 ## Getting Started
 
-TO DO
-
-
 ### Prerequisites
 
 You need to install Offsh Xonsh appimage and a Wazuh agent.
