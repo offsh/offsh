@@ -1,9 +1,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/offsh/offshell">
-    <img src="images/LOGO_LARGE.png" alt="Logo" width="1920" height="1080">
-  </a>
+  
+  ![](images/LOGO_LARGE.png)
 
   <h3 align="center">OffShell</h3>
 
