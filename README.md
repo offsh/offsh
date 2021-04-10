@@ -147,7 +147,7 @@ Distributed under the GLP3 License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Francisco Navarro - [@twitter_handle](https://twitter.com/fnm121grg) - Navarromoralesdev@gmail.com
+Francisco Navarro - [@twitter_handle](https://twitter.com/spothound) - Navarromoralesdev@gmail.com
 
 Project Link: [https://github.com/offsh/offshell](https://github.com/offsh/offshell)
 
