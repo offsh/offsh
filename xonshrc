@@ -72,9 +72,13 @@ Command capture methods
 def predict_false(args):
     """Never say the process is threadable."""
     return False
+    
+def predict_true(args):
+    """Always say the process is threadable."""
+    return True
 
 __xonsh__.commands_cache.threadable_predictors['xxh'] = predict_false
-
+__xonsh__.commands_cache.threadable_predictors['nmap'] = predict_true
 
 """ ----------------------------------------------------------------------------------------------------------
 EXTRA USER CONFIGURATION
