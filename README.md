@@ -43,6 +43,7 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#Build">Build</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -128,6 +129,14 @@ You would check (among other things) your syslog filename. You should mark it fo
 After adding that block to your ossec.conf file, if you agent is correctly connected to a Wazuh manager it woud start sending information about exeuted commands to your server and it will index it to a Elasticsearch index.
 
 Finally, you would need to add the rules and decoders from https://github.com/offsh/offshell/tree/main/ruleset to `/var/ossec/etc/rules` and `/var/ossec/etc/decoders/`
+
+## Build
+
+You can modify this proyect and build your own appimages using the tools included in the build_appimage directory.
+
+For example, to include more python depedencies in the appimage you only need to modify the `pre-requirements.txt` file.
+
+You could also modify the xonsh/xxh configuration file to add functionalities, plugins, aliases, etc..
 
 
 <!-- ROADMAP -->
