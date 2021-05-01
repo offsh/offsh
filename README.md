@@ -76,7 +76,9 @@ This image is intended to be used along with xxh proyect so you could extend it'
 <!-- GETTING STARTED -->
 ## Getting Started
 
-### Installation
+### Installation of official images.
+
+We have some pre-built images available here at Github.
 
 It is not required to install Xonsh, you only need to download the last built appimage and make it executable to run the shell.
 
