@@ -63,7 +63,7 @@ Environment Variables
 """
 
 $PATH.append("~/.local/bin/")
-
+$PATH += sys.path
 
 """ ----------------------------------------------------------------------------------------------------------
 Command capture methods
