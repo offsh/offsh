@@ -84,16 +84,16 @@ It is not required to install Xonsh, you only need to download the last built ap
 
 Download Xonsh:
 ```
-sudo wget https://github.com/offsh/offsh/releases/download/0.0.2/xonsh -O /bin/xonsh
+sudo wget -q https://github.com/offsh/offsh/releases/download/0.0.2/xonsh -O /bin/xonsh
 sudo chmod a+x /bin/xonsh
 ```
 
 The appimage includes the xxh package but not the configuration file. You should also download the configuration file for xonsh:
 
 ```
-curl -o ~/.xonshrc https://raw.githubusercontent.com/offsh/offshell/main/xonshrc
+wget -q https://raw.githubusercontent.com/offsh/offshell/main/xonshrc -O ~/.xonshrc
 mkdir -p ~/.config/xxh/
-curl -o ~/.config/xxh/config.xxhc https://raw.githubusercontent.com/offsh/xxh/master/config.xxhc
+wget -q https://raw.githubusercontent.com/offsh/xxh/master/config.xxhc -O ~/.config/xxh/config.xxhc
 ```
 
 ### Make it default
