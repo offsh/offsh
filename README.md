@@ -84,7 +84,7 @@ It is not required to install Xonsh, you only need to download the last built ap
 
 Download Xonsh:
 ```
-sudo wget https://github.com/offsh/offshell/releases/download/0.0.2/xonsh -O /bin/xonsh
+sudo wget https://github.com/offsh/offsh/releases/download/0.0.2/xonsh -O /bin/xonsh
 sudo chmod a+x /bin/xonsh
 ```
 
